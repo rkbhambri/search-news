@@ -3,7 +3,7 @@ import React from 'react';
 const NewsTitle = (props) => {
     return (
         <div className="newsTitle">
-            <p style={{ fontWeight: 'bold' }}>{props.title}</p>
+            <span style={{ fontWeight: 'bold' }}>{props.title}</span>
         </div>
     );
 };

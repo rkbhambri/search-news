@@ -1,20 +1,18 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Title from '../../components/Title/Title';
 import SearchBar from '../../components/SearchBar/SearchBar';
 import Filter from '../../components/Filter/Filter';
 
-class Header extends Component {
-    render() {
-        return (
-            <div className="header">
-                <div className="row">
-                    <Title title="Search News" />
-                    <SearchBar />
-                    <Filter />
-                </div>
+const Header = (props) => {
+    return (
+        <div className="header">
+            <div className="row w-100 m-0 pl-3" style={{ background: '#ccc' }}>
+                <Title title="Search News" />
+                <SearchBar searchInputHandler={(event) => props.searchInputHandler(event)} />
+                <Filter sortBy={(event) => props.sortBy(event)} />
             </div>
-        );
-    };
+        </div>
+    );
 };
 
 export default Header;
