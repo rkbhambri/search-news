@@ -119,7 +119,7 @@ class Layout extends Component {
 				<Header
 					sortBy={(event) => this.sortBy(event)}
 					searchInputHandler={(event) => this.searchInputHandler(event)} />
-				<NewsList newsData={(this.state.filteredNewsData !== null || this.state.inputSearch.length > 0) ? this.state.filteredNewsData : this.state.newsData.slice(this.state.skip, this.state.limit)} />
+				<NewsList newsData={(this.state.filteredNewsData !== null || this.state.inputSearch.length > 0) ? this.state.filteredNewsData.slice(this.state.skip, this.state.limit) : this.state.newsData.slice(this.state.skip, this.state.limit)} />
 				{
 					this.state.showPagination &&
 					<Pagination
