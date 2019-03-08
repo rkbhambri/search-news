@@ -1,4 +1,5 @@
 import React from 'react';
+import './SearchBar.css';
 
 const SearchBar = (props) => {
     return (
@@ -8,7 +9,8 @@ const SearchBar = (props) => {
                     type="text"
                     className="form-control"
                     placeholder="Search here"
-                    onChange={(event) => props.searchInputHandler(event)} />
+                    onChange={(event) => props.searchInputHandler(event)}
+                    style={{ border: 'none', borderRadius: 0 }} />
             </form>
         </div>
     );

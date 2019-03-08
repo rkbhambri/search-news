@@ -3,7 +3,7 @@ import NewsItem from './NewsItem';
 
 const NewsList = (props) => {
     return (
-        <div className="newsList pl-3" style={{ background: '#eee' }}>
+        <div className="newsList pl-3" style={{ background: '#F6F6EF' }}>
             {
                 props.newsData.length > 0 && props.newsData.map((item, index) => {
                     return <NewsItem item={item} key={index} />
